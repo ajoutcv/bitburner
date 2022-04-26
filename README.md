@@ -7,7 +7,7 @@ I've still got to put in some descriptive comments at the top of some of the scr
 
 I'm planning on going through and updating stuff as I get further into the game and develop my skills a bit more.
 
-You're welcome to give them a shot. Any feedback is very welcome, just be sure to link your code if you post it somewhere!
+You're welcome to give them a shot. Any feedback is very welcome, just be sure to cite me if you post it somewhere!
 
 ROUGH OUTLINE OF SCRIPTS:
 -------------------------
