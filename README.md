@@ -1,5 +1,5 @@
 # bitburner
-This is a collection of scripts I have written for the game BitBurner.
+This is a collection of scripts I have written for the game BitBurner - a free to play game based around hacking using JS.
 
 The scripts are pretty simple in my eyes as I've been mainly using the game as a learning tool for JavaScript.
 
