@@ -27,7 +27,10 @@ export async function main(ns) {
 
 
 	// try to create brutessh.exe
-	try { ns.singularity.createProgram('BruteSSH.exe'); } catch { }
+	if(!ns.fileExists('BruteSSH.exe')){
+		try { ns.singularity.createProgram('BruteSSH.exe'); } catch { }
+	}
+	
 
 	// create a check to see if we have completed stage 2
 	while (!ns.fileExists('BruteSSH.exe')) {
