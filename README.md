@@ -11,7 +11,7 @@ You're welcome to give them a shot. Any feedback is very welcome, just be sure t
 
 ROUGH OUTLINE OF SCRIPTS:
 -------------------------
-* I completely re-wrote most of the scripts I was using to try and reduce my code length and try out new ways of automating things. I'll probably go through and rewrite the main cycle again as I could probably improve it further by removing some parts. The next version will probably be an attempt at creating a batcher as well as even more automation for things like factions and augmentation purchasing.
+* I completely re-wrote most of the scripts I was using to try and reduce my code length and try out new ways of automating things. I'll probably go through and rewrite the main cycle again as I could probably improve it further by removing some parts. The next version will probably be an attempt at creating a batcher as well as even more automation for things like factions and augmentation purchasing. I'll also start organising things into folders as things are looking a bit messy and unorganised.
 
 <strong>auto.js:</strong>
 Simple automation script for setting up the player computer, purchased servers and hack files. Once the player's home computer reaches 512 gig ram it will start 'three.js' for automate the purchasing of servers before terminating.
