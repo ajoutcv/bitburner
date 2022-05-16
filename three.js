@@ -1,16 +1,26 @@
 /** @param {NS} ns */
+/**
+ * purchase the initial servers then continues to upgrade them to their max level
+ */
 export async function main(ns) {
-	/* automatically check if the player servers need to be upgraded
-	 * when you upgrade, upgrade all server at once to minimize downtime
-	 * keep upgrading until you hit the maximum pServer ram the game will allow
-	*/
+	ns.toast("Purchasing initial servers")
+	var ram = 8
+	var count = 0 + ns.getPurchasedServers().length
 
-	// the file we need to send to the upgraded servers
-	let files = ["hackFileManager.js", "hack.js", "weaken.js", "grow.js"]
-	// set the base ram
-	let ram = 16
+	// check the player money
+	while (count < ns.getPurchasedServerLimit()) {
+		if (ns.getServerMoneyAvailable("home") > ns.getPurchasedServerCost(ram)) {
+			ns.purchaseServer("pServer-" + count, ram)
+			count++
+		}
+		await ns.sleep(100)
+	}
+	ns.toast("Initial servers purchased.")
+	await ns.sleep(3000)
+	ns.toast("Starting server upgrader.")
 	// generate a list of pServers
 	let pServers = ns.getPurchasedServers()
+	ram = ram*2
 
 	// check that we haven't hit the max pServer ram in the game
 	// -------------->>>> disable access to the pServers while in the loop to avoid shutting it down from connection issues
@@ -27,16 +37,9 @@ export async function main(ns) {
 					await ns.deleteServer(pServers[s])
 					await ns.purchaseServer(pServers[s], ram)
 					await ns.sleep(100)
-					for(let f = 0;f<files.length;f++){
-						await ns.scp(files[f],"home",pServers[s])
-					}
 				}
 				// change the ram tier to the next level
 				ram = ram * 2
-				// check to see if targetManager.js is running, if not, refresh it
-				await ns.kill("targetManager.js","home")
-				await ns.sleep(1000)
-				await ns.exec("targetManager.js", "home", 1)
 			}
 		}
 		// if the server ram is already equal to or greater than the set ram,
