@@ -37,5 +37,5 @@ Scans every server in the network and writes to a file named map.txt the hostnam
 <strong>shareStarter.js / shareComp.js:</strong>
 Sends the shareComp.js file to all your servers before executing them with max availble threads for helping with reputation farming.
 
-<strong>intFarm.js / shareComp.js:</strong>
+<strong>intFarm.js:</strong>
 Checks any faction invites you have and automatically joins them before performing a soft reset. This is the fastest way I have found to farm intelligence so far. For maximum experience you need to have joined most or all of the company factions as these are available after a soft reset.
