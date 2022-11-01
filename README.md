@@ -1,3 +1,5 @@
+**** DUE TO THE RELEASE OF V2.0 MOST OF THESE SCRIPTS WILL NEED REVIEW BEFORE RUNNING ****
+
 # bitburner
 This is a collection of scripts I have written for the game BitBurner - a free to play game based around hacking using JS.
 
